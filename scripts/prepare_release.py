@@ -12,7 +12,7 @@ VERSION = '0.1.0'
 SOURCES = (
     '.gitignore', '.dockerignore', '.github/workflows/checks.yml',
     'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md',
-    'docs/SELF_HOSTING.md', 'docs/GITHUB_RELEASE.md',
+    'docs/SELF_HOSTING.md', 'docs/USAGE.md', 'docs/GITHUB_RELEASE.md',
     'server.py', 'collaboration.py', 'maintenance.py', 'package.json',
     'start.bat', 'start-lan.bat', 'start.sh', 'Dockerfile', 'compose.yaml',
     'public/index.html', 'public/shared.js', 'public/features.js',

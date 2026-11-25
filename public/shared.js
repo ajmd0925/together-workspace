@@ -16,11 +16,7 @@ const icons = {
  spark:'<path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/>'
 };
 const icon = (name, cls='') => `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name] || icons.file}</svg>`;
-const demoFiles = [
- {id:'demo1',name:'项目说明.md',size:2340,author:'林小满',channel_id:'general',created:Date.now()/1000,content:'# 品牌官网 · 项目说明\n\n让好的想法，在这里一起发生。\n\n## 项目目标\n为团队打造清晰、友好的品牌展示网站。\n\n## 工作约定\n- 设计资料放在「资料分享」群聊\n- 代码讨论放在「开发协作」群聊\n- 每周五同步项目进展\n\n## 目录\n```\nsrc/\n  components/\n  pages/\n  styles/\n```'},
- {id:'demo2',name:'workspace.ts',size:1280,author:'陈一',channel_id:'dev',created:Date.now()/1000,content:'// 一个让团队保持同频的工作区\nexport interface Workspace {\n  id: string;\n  name: string;\n  members: Member[];\n  channels: Channel[];\n}\n\nexport function createWorkspace(name: string): Workspace {\n  return {\n    id: crypto.randomUUID(),\n    name,\n    members: [],\n    channels: [],\n  };\n}\n'},
- {id:'demo3',name:'设计交付清单.md',size:948,author:'苏然',channel_id:'resources',created:Date.now()/1000,content:'# 设计交付清单\n\n- [x] 品牌色与字体规范\n- [x] 首页布局\n- [ ] 移动端适配\n- [ ] 组件交互说明\n\n请在设计讨论中留下你的想法。'}
-];
+const demoFiles = [];
 async function api(path, data){
  const response=await fetch(path,{signal:AbortSignal.timeout(20000),method:data===undefined?'GET':'POST',headers:data===undefined?{}:{'Content-Type':'application/json'},body:data===undefined?undefined:JSON.stringify(data)});
  const result=await response.json();if(!response.ok){const error=new Error(result.error || '请求失败');error.status=response.status;throw error;}return result;
