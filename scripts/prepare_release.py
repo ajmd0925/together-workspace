@@ -13,6 +13,8 @@ SOURCES = (
     '.gitignore', '.dockerignore', '.github/workflows/checks.yml',
     'README.md', 'LICENSE', 'CHANGELOG.md', 'CONTRIBUTING.md', 'SECURITY.md',
     'docs/SELF_HOSTING.md', 'docs/USAGE.md', 'docs/GITHUB_RELEASE.md',
+    'README.en.md', 'CHANGELOG.en.md', 'CONTRIBUTING.en.md', 'SECURITY.en.md',
+    'docs/SELF_HOSTING.en.md', 'docs/USAGE.en.md', 'docs/GITHUB_RELEASE.en.md',
     'server.py', 'collaboration.py', 'maintenance.py', 'package.json',
     'start.bat', 'start-lan.bat', 'start.sh', 'Dockerfile', 'compose.yaml',
     'public/index.html', 'public/shared.js', 'public/features.js',
