@@ -1,0 +1,6 @@
+{
+  "name": "together-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": { "start": "python server.py", "test": "python -m unittest discover -s tests -v" }
+}

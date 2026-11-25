@@ -1,0 +1,13 @@
+services:
+  together:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${TOGETHER_BIND:-127.0.0.1}:${TOGETHER_PORT:-8765}:8765"
+    environment:
+      COOKIE_SECURE: "${COOKIE_SECURE:-0}"
+    volumes:
+      - together-data:/app/data
+
+volumes:
+  together-data:
